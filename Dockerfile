@@ -11,7 +11,7 @@ RUN apk --no-cache add --update \
     musl-dev \ 
     postgresql-dev \
     && npm install -g heroku \
-    && pip install --no-cache-dir pipenv flake8 \
+    && pip install --no-cache-dir pipenv flake8 flake8-per-file-ignores \
     && npm cache --force clean  \
     && apk del .build-deps \
     && rm -rf /var/cache/apk/*
